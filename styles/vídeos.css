@@ -1,4 +1,4 @@
-/* Reset básico */
+/* ================== RESET BÁSICO ================== */
 html,
 body {
     height: 100%;
@@ -15,9 +15,9 @@ body {
     background-attachment: fixed;
 }
 
-/* Cabeçalho */
+/* ================== CABEÇALHO ================== */
 header {
-    font-family: gill sans;
+    font-family: "Gill Sans", sans-serif;
     background-color: #000000;
     color: white;
     padding: 10px 0;
@@ -39,16 +39,15 @@ span {
     color: rgb(255, 217, 0);
 }
 
-/* Botão voltar abaixo do header, alinhado à esquerda - desktop */
+/* ================== BOTÃO VOLTAR ================== */
 .nav-button {
-    position: relative; /* fica dentro do fluxo normal */
+    position: relative;
     max-width: 900px;
     margin: 10px 0 20px 0;
     padding-left: 10px;
     text-align: left;
 }
 
-/* Estilo do botão */
 .nav-button button {
     background: none;
     border: none;
@@ -74,7 +73,7 @@ a:hover {
     color: rgb(255, 219, 17);
 }
 
-/* Container principal */
+/* ================== CONTAINER PRINCIPAL ================== */
 .container {
     background-color: rgb(70, 70, 70);
     text-align: center;
@@ -91,17 +90,33 @@ a:hover {
     text-shadow: 2px 2px 4px black;
 }
 
-/* Vídeos responsivos e menores */
-video {
-    width: 100%;
-    max-width: 400px; /* diminui o tamanho máximo do vídeo */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+/* ================== VÍDEOS / CAPAS ================== */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* proporção 16:9 */
+    height: 0;
+    overflow: hidden;
     margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
-/* Footer fixo */
+.video-container iframe,
+.video-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.video-container img {
+    cursor: pointer;
+}
+
+/* ================== FOOTER ================== */
 #footer_copyright {
     position: fixed;
     bottom: 0;
@@ -117,21 +132,14 @@ video {
     z-index: 100;
 }
 
-/* ======== RESPONSIVO ======== */
-
+/* ================== RESPONSIVO ================== */
 @media screen and (max-width: 900px) {
-    /* Centraliza o botão voltar */
     .nav-button {
-        position: static; /* remove position relative */
+        position: static;
         max-width: none;
         margin: 20px auto 30px auto;
         text-align: center;
         padding-left: 0;
-    }
-
-    /* Vídeos menores em telas pequenas */
-    video {
-        max-width: 320px;
     }
 
     .container {
@@ -146,7 +154,7 @@ video {
         font-size: 1.2em;
     }
 
-    video {
-        max-width: 280px;
+    .video-container {
+        margin-bottom: 20px;
     }
 }
