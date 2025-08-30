@@ -1,0 +1,190 @@
+/* Reset básico e corpo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.829)), url("../assents/img/fundonoticias.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Cabeçalho */
+header {
+    font-family: gill sans;
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+span {
+    color: rgb(255, 217, 0);
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 20px;
+    word-break: break-word;
+}
+
+/* Container das notícias */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.411);
+    word-wrap: break-word;
+}
+
+/* Texto das notícias dentro do painel */
+.panel p {
+    color: black;
+    line-height: 1.4em;
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+/* Data da notícia */
+.data {
+    color: #888;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+/* Botões accordion */
+.accordion {
+    background-color: rgb(255, 217, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.accordion:hover {
+    background-color: rgb(185, 158, 0);
+}
+
+/* Painel das notícias - conteúdo expandido */
+.panel {
+    padding: 0 15px 15px 15px;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+    border-left: 3px solid yellow;
+    border-right: 3px solid yellow;
+    border-bottom: 3px solid yellow;
+    margin-bottom: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Título menor */
+h2 {
+    text-align: center;
+    margin: 20px 10px 40px 10px;
+    word-break: break-word;
+}
+
+/* Botão voltar */
+.nav-button {
+    position: absolute;
+    max-width: 900px;
+    margin: 10px auto 0 auto;
+    text-align: left;
+}
+
+.nav-button button {
+    background: none;
+    color: #000000;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button button:hover {
+    color: rgb(255, 219, 17);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+a:hover {
+    color: rgb(255, 219, 17);
+}
+
+/* Rodapé fixo */
+footer {
+   background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* ==== RESPONSIVIDADE ==== */
+
+/* Em telas médias e menores */
+@media screen and (max-width: 900px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    header h1,
+    h1,
+    h2,
+    .accordion {
+        font-size: 1.2em;
+    }
+
+    .accordion {
+        padding: 12px;
+    }
+    
+    /* Botão voltar centralizado */
+    .nav-button {
+        position: static;
+        margin: 15px auto;
+        text-align: center;
+    }
+}
+
+/* Em telas pequenas (celular) */
+@media screen and (max-width: 480px) {
+    header h1,
+    h1,
+    h2,
+    .accordion {
+        font-size: 1em;
+    }
+    
+    .accordion {
+        padding: 10px;
+    }
+}

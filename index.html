@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles/style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="assents/img/favicon.webp" type="image/x-icon" />
+  <title>Karatê poa</title>
+</head>
+
+<body>
+  <header>
+    <div id="title">
+      <img src="./assents/img/desenhoheader.webp" alt="logo de luta no header" />
+      <div class="title-text">
+        <h1><span>Karatê</span> <br />Porto Alegre</h1>
+      </div>
+    </div>
+
+    <!-- Menu Tradicional para Desktop -->
+    <nav class="menu-desktop">
+      <ul>
+        <li><a href="links-header/videos.html">Vídeos</a></li>
+        <li><a href="links-header/serviços.html">Serviços</a></li>
+        <li><a href="links-header/noticias.html">Notícias</a></li>
+        <li><a href="links-header/contato.html">Contato</a></li>
+        <li><a href="#cadastrar" id="Escreva-se">Já tem uma conta?</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <nav class="menu-mobile">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li><a href="links-header/videos.html">Vídeos</a></li>
+        <li><a href="links-header/serviços.html">Serviços</a></li>
+        <li><a href="links-header/noticias.html">Notícias</a></li>
+        <li><a href="links-header/contato.html">Contato</a></li>
+        <li><a href="#cadastrar" id="Escreva-se-mobile">Já tem uma conta?</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <aside>
+      <h2><span>Força e Foco</span></h2>
+      <h2>Em cada movimento!</h2>
+      <p>
+        Desperte sua força, disciplina e foco com os treinos de Karatê para todas as idades.
+        Matrículas abertas! Entre em contato e comece sua jornada hoje mesmo.
+      </p>
+    </aside>
+
+    <article>
+      <img src="assents/img/time.png" alt="Luta de karate" />
+    </article>
+
+    <p>
+      Na Academia Karatê Porto Alegre, nosso compromisso vai muito além da prática de golpes e técnicas marciais.
+      <br /><br />
+      Trabalhamos com alunos de todas as idades para desenvolver não apenas a habilidade física, mas também valores fundamentais como disciplina, respeito, foco e autoconfiança.
+      <br /><br />
+      Nosso método de ensino une tradição e modernidade, proporcionando um ambiente acolhedor e motivador.
+      <br /><br />
+      Durante as aulas, os alunos aprendem as diversas modalidades do karatê, incluindo formas (katas), combates (kumite) e exercícios de autodefesa, sempre com orientação de instrutores experientes e certificados.
+      <br /><br />
+      Além do aprimoramento técnico, incentivamos a concentração mental e o equilíbrio emocional, preparando nossos alunos para desafios dentro e fora do tatame.
+      <br /><br />
+    </p>
+
+    <article>
+      <img src="./assents/img/senseis.png" alt="todos do dojo" />
+    </article>
+
+    <form id="cadastrar">
+      <input type="text" placeholder="Nome" />
+      <input type="email" placeholder="E-mail" />
+      <button type="submit">Criar conta</button>
+    </form>
+
+    <p>Quer fazer Parte desse Dojo? Cadastre-se no site e nos contate!</p>
+  </main>
+
+  <footer>
+    <div id="footer_copyright">
+      &#169; 2025 Vitor Ribeiro Espinosa
+    </div>
+  </footer>
+
+  <script>
+    // Controle do menu mobile
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    // Validação do formulário
+    document.getElementById("cadastrar").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const nome = document.querySelector('#cadastrar input[type="text"]').value.trim();
+      const email = document.querySelector('#cadastrar input[type="email"]').value.trim();
+
+      const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (nome === "" || email === "") {
+        alert("Por favor, preencha todos os campos.");
+      } else if (!emailValido) {
+        alert("Por favor, informe um e-mail válido.");
+      } else {
+        alert(`${nome} (${email}), conta criada com sucesso!`);
+        document.title = "Conta Criada com Sucesso!";
+      }
+    });
+  </script>
+</body>
+</html>

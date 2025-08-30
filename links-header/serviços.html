@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Planos de Assinatura</title>
+    <link rel="stylesheet" href="../styles/serviços.css">
+    <link rel="shortcut icon" href="../assents/img/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <div id="Nplanos">
+        <h2><span>Karatê</span> <br> Porto Alegre</h2>
+    </div>
+
+    <div class="voltar">
+        <a href="../index.html" alt="clique para voltar para a tela inicial">⬅</a>
+    </div>
+
+    <h1>Nossos Planos de <br><span> Assinatura</span></h1>
+
+    <section class="planos">
+        <div class="container">
+            <div class="plano">
+                <h2>Plano Basic</h2>
+                <p class="preco-antigo">R$ 59,90</p>
+                <p class="preco">R$ 49,90</p>
+                <ul>
+                    <li><strong>Acesso a aulas básicas</strong> de karatê para iniciantes</li>
+                    <li>6 meses de acesso ao dojo e aos treinos em grupo</li>
+                </ul>
+                <button class="botao">Assinar</button>
+            </div>
+
+            <div class="plano destaque">
+                <div class="etiqueta">MAIS POPULAR</div>
+                <h2>Plano Platinum</h2>
+                <p class="preco-antigo">R$ 349,30</p>
+                <p class="preco">R$ 89,90</p>
+                <ul>
+                    <li><strong>Acesso completo</strong> a todas as aulas, incluindo técnicas avançadas</li>
+                    <li>1 ano de acesso ao dojo, treinos em grupo e seminários especiais</li>
+                </ul>
+                <button class="botao">Assinar</button>
+            </div>
+
+            <div class="plano">
+                <h2>Plano Master</h2>
+                <p class="preco-antigo">R$ 149,70</p>
+                <p class="preco">R$ 69,90</p>
+                <ul>
+                    <li><strong>Acesso a aulas intermediárias</strong> e especiais</li>
+                    <li>9 meses de acesso ao dojo, treinos em grupo e workshops exclusivos</li>
+                </ul>
+                <button class="botao">Assinar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer_copyright">
+            &#169; 2025 Vitor Ribeiro Espinosa
+        </div>
+    </footer>
+
+    <script>
+        const botoes = document.querySelectorAll('.botao');
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const plano = botao.closest('.plano').querySelector('h2').innerText;
+                alert(`Você escolheu o plano: ${plano} Parabéns pela escolha!`);
+            });
+        });
+    </script>
+</body>
+</html>

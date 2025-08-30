@@ -1,0 +1,183 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estrutura para ocupar 100% da altura e posicionar footer */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.829)), url("../assents/img/fundocontato.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+/* Cabeçalho do site */
+#Nplanos {
+  font-family: helvetica;
+  background-color: black;
+  padding: 8px;
+  text-align: center;
+}
+
+h2 {
+  font-family: gill sans;
+}
+
+span {
+  font-family: gill sans;
+  color: yellow;
+}
+
+/* Header da página */
+header {
+  text-align: center;
+  padding: 40px 20px 10px 20px;
+}
+
+/* Botão voltar abaixo do header, alinhado à esquerda no desktop */
+.voltar {
+  position: relative; /* no fluxo natural */
+  max-width: 900px;
+  margin: 0 0 20px 10px;
+  text-align: left;
+}
+
+/* Estilo do link voltar */
+.voltar a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.voltar a:hover {
+  color: yellow;
+}
+
+/* Container do formulário */
+main.contact-container {
+  flex: 1; /* ocupa espaço restante para empurrar footer para baixo */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  width: 100%;
+}
+
+/* Estilo do formulário */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-form label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+}
+
+.contact-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: yellow;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #cc9600;
+}
+
+/* Rodapé */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #000000;
+  color: white;
+  padding: 0px 2px;
+}
+
+.footer-column {
+  margin: 20px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ======== RESPONSIVO ======== */
+
+@media screen and (max-width: 900px) {
+  /* Centraliza o botão voltar */
+  .voltar {
+    position: static;
+    max-width: none;
+    margin: 20px auto 30px auto;
+    text-align: center;
+  }
+
+  main.contact-container {
+    width: 90%;
+    padding: 0 10px 40px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2em;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+  }
+}

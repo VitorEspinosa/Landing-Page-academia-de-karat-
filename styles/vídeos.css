@@ -1,0 +1,152 @@
+/* Reset básico */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* evita rolagem horizontal */
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.829)),
+        url("../assents/img/fundovideos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Cabeçalho */
+header {
+    font-family: gill sans;
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+}
+
+span {
+    color: rgb(255, 217, 0);
+}
+
+/* Botão voltar abaixo do header, alinhado à esquerda - desktop */
+.nav-button {
+    position: relative; /* fica dentro do fluxo normal */
+    max-width: 900px;
+    margin: 10px 0 20px 0;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* Estilo do botão */
+.nav-button button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button button:hover {
+    color: rgb(255, 219, 17);
+}
+
+a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 219, 17);
+}
+
+/* Container principal */
+.container {
+    background-color: rgb(70, 70, 70);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 217, 0);
+    width: fit-content;
+    margin: 0 auto 40px auto;
+}
+
+.container p {
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* Vídeos responsivos e menores */
+video {
+    width: 100%;
+    max-width: 400px; /* diminui o tamanho máximo do vídeo */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+}
+
+/* Footer fixo */
+#footer_copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+/* ======== RESPONSIVO ======== */
+
+@media screen and (max-width: 900px) {
+    /* Centraliza o botão voltar */
+    .nav-button {
+        position: static; /* remove position relative */
+        max-width: none;
+        margin: 20px auto 30px auto;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    /* Vídeos menores em telas pequenas */
+    video {
+        max-width: 320px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: 1.2em;
+    }
+
+    video {
+        max-width: 280px;
+    }
+}

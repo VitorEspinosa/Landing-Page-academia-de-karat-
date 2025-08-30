@@ -1,0 +1,346 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83)),
+    url("../assents/img/fundotreino.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+    font-family: gill sans;
+  height: 90px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#title img {
+  width: 80px;
+  height: auto;
+}
+
+.title-text h1 {
+  font-weight: 200;
+  margin: 0;
+}
+
+.title-text span {
+  color: rgb(255, 217, 0);
+}
+
+.menu-desktop ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-desktop li {
+  display: inline-block;
+}
+
+.menu-desktop a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.menu-desktop a:hover {
+  color: rgb(255, 217, 0);
+  transition: 0.3s all;
+}
+
+#Escreva-se {
+  border: 2px solid rgb(255, 217, 0);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#Escreva-se:hover {
+  background-color: rgb(255, 217, 0);
+  color: black;
+}
+
+main {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  color: white;
+}
+
+aside {
+  flex: 1 1 300px;
+}
+
+aside h2 {
+  font-size: 48px;
+  line-height: 1;
+  margin: 0;
+}
+
+aside h2 span {
+  color: rgb(255, 217, 0);
+}
+
+aside p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-top: 15px;
+  max-width: 400px;
+}
+
+article {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article img {
+  max-width: 100%;
+  border-radius: 30px;
+  height: auto;
+}
+
+main > p {
+  flex-basis: 100%;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 25px;
+  padding-left: 15px;
+  max-width: 900px;
+}
+
+form#cadastrar {
+  flex-basis: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0;
+  padding-left: 15px;
+}
+
+form#cadastrar input {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+form#cadastrar button {
+  background-color: rgb(255, 217, 0);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form#cadastrar button:hover {
+  background-color: #e0c200;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-size: 14px;
+}
+
+/* ========== MENU INTERATIVO (MOBILE) ========== */
+
+.menu-desktop {
+  display: flex;
+}
+
+.menu-mobile {
+  display: none;
+  width: 100%;
+  justify-content: center; /* centraliza o botão */
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  user-select: none;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: auto;
+  min-width: 150px;
+  z-index: 999;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.menu li {
+  margin: 10px 15px;
+  list-style: none;
+  text-align: left;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+}
+
+.menu a:hover {
+  color: rgb(255, 217, 0);
+  transition: 0.3s all;
+}
+
+.menu.active {
+  display: flex;
+}
+
+/* Estilo igual ao desktop para o botão do menu mobile */
+#Escreva-se-mobile {
+  border: 2px solid rgb(255, 217, 0);
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  width: auto;
+  text-align: center;
+}
+
+#Escreva-se-mobile:hover {
+  background-color: rgb(255, 217, 0);
+  color: black;
+  transition: 0.3s;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  #title {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: center; /* centraliza os itens do header */
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  aside,
+  article {
+    flex: none;
+    width: 90%;
+  }
+
+  main > p {
+    max-width: 90%;
+    padding-left: 0;
+  }
+
+  form#cadastrar {
+    max-width: 90%;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #title img {
+    width: 60px;
+  }
+
+  .title-text h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  aside h2 {
+    font-size: 36px;
+  }
+
+  aside p,
+  main > p {
+    font-size: 16px;
+  }
+
+  form#cadastrar input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  form#cadastrar button {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  #Escreva-se,
+  #Escreva-se-mobile {
+    padding: 6px;
+    font-size: 14px;
+  }
+}

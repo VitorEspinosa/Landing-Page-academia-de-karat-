@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Academia Dragão Dourado</title>
+    <link rel="stylesheet" href="../styles/noticias.css">
+    <link rel="shortcut icon" href="../assents/img/favicon.webp" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1><span>Karatê</span> <br> Porto Alegre</h1>
+    </header>
+
+    <div class="nav-button">
+    <button><a href="../index.html">⬅</a></button>
+    </div>
+
+    <h1>Notícias</h1>
+
+    
+
+    <div class="container">
+
+        <button class="accordion">Equipe conquista 1º lugar no Torneio Regional de Karatê</button>
+        <div class="panel">
+            <p class="data">Publicado em 10 de junho de 2025</p>
+            <p>A Academia Karatê Porto Alegre brilhou no Torneio Regional de Karatê realizado em Porto Alegre no último fim de semana. A equipe levou o troféu de 1º lugar na categoria masculina, além de conquistar 7 medalhas individuais. Parabéns a todos os atletas e ao sensei Igor pela excelente preparação!</p>
+        </div>
+
+        <button class="accordion">Aluna faixa-preta realiza demonstração em escola pública</button>
+        <div class="panel">
+            <p class="data">Publicado em 5 de junho de 2025</p>
+            <p>A jovem aluna Mariana Lopes, faixa-roxa da Academia Karatê Porto Alegre, realizou uma apresentação de karatê para os alunos da Escola Municipal Rui Barbosa. O evento teve como objetivo inspirar crianças a praticarem esportes e desenvolverem disciplina. A iniciativa foi muito bem recebida e deve se repetir em outras escolas da região.</p>
+        </div>
+         <h2>Mais Notícias em breve.</h2>
+    </div>
+
+    <footer>
+        &copy; 2025 Vitor Ribeiro Espinosa
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(button => {
+        button.addEventListener("click", function () {
+            const panel = this.nextElementSibling;
+
+            // Fecha outros painéis
+            document.querySelectorAll('.panel').forEach(p => {
+                if (p !== panel) p.style.display = 'none';
+            });
+
+            // Toggle painel atual
+            panel.style.display = (panel.style.display === "block") ? "none" : "block";
+        });
+    });
+});
+    </script>
+</body>
+</html>
